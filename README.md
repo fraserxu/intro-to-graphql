@@ -1,7 +1,9 @@
 # intro-to-graphql
 A intro to graphql
 
-### 1. Setup
+## 💻 Live Coding
+
+### 🏠 1. Setup
 
 ```sh
 mkdir intro-to-graphql
@@ -15,7 +17,7 @@ npm init -y
 npm install graphql express express-graphql --save
 ```
 
-### 2. Data
+### 📖 2. Data
 
 ```sh
 touch index.js
@@ -41,7 +43,7 @@ Define the user data in `data.json`
 }
 ```
 
-### 3. Server
+### 💾 3. Server
 
 ```js
 const graphql = require('graphql')
@@ -54,7 +56,7 @@ express().listen(port)
 console.log('GraphQL server running on http://localhost:3000/graphql')
 ```
 
-### 4. Define Schema and add `users` query
+### 👨‍👨‍👧‍👧 4. Define Schema and add `users` query
 
 ```js
 const userType = new graphql.GraphQLObjectType({
@@ -82,7 +84,7 @@ const schema = new graphql.GraphQLSchema({
 })
 ```
 
-### 5. Load schema and use as middleware
+### 🚢 5. Load schema and use as middleware
 
 ```js
 const port = process.env.port || 3000
@@ -95,7 +97,7 @@ express()
   .listen(port)
 ```
 
-### 6. Add `user` query
+### 🙆 6. Add `user` query
 
 ```js
 user: {
@@ -109,9 +111,9 @@ user: {
 }
 ```
 
-### 7. Talk to restful api
+### 🌐 7. Talk to restful api
 
-### 8. Talk to database
+### 📟 8. Talk to database
 
 Install couchdb nodejs client `npm install nano --save`
 
@@ -143,7 +145,8 @@ nano.db.destroy(dbName, function () {
   })
 })
 ```
-### 9. Fetch data from db
+
+### 🏁 9. Fetch data from db
 
 ```js
 function getUserById (id) {
